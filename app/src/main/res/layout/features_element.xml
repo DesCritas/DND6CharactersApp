@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/action_card_elements"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/action_card_elements"
+        android:layout_marginTop="4dp">
+        <TextView
+            android:id="@+id/skill_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:layout_marginStart="8dp"
+            android:text="Fighting"
+            />
+        <TextView
+            android:id="@+id/feature_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp"
+            android:text="Fighting maneuver"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            />
+
+        <TextView
+            android:id="@+id/feature_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_weight="5"
+            android:layout_marginEnd="8dp"
+            android:text="Active" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/cast_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="start"
+            android:layout_marginStart="8dp"
+            android:text="Cast time: various"
+            />
+
+        <TextView
+            android:id="@+id/consumptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_weight="5"
+            android:layout_marginEnd="8dp"
+            android:text="consumption: various" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:layout_marginStart="8dp"
+            android:text="Duration: various"
+            />
+
+        <TextView
+            android:id="@+id/components"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_weight="5"
+            android:layout_marginEnd="8dp"
+            android:text="Needs: various" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/action_card_elements"
+android:padding="4dp"
+        android:text="Combat Superiority Maneuvers.
+You learn three fighting maneuvers of your choice, which are listed under Maneuvers table below.
+Many maneuvers enhance an attack in some way. You can use only one maneuver per action.
+
+Enemy ability check.
+Some of your maneuvers require your target to make an characteristic check (CC) to resist the maneuver's effects.
+The difficulty is calculated as follows:
+Check Difficulty (CD)[CC] = 1d20 + your fighting ability modifier(FAM)"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/cast_requirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginStart="8dp"
+            android:text="no requirements"
+            android:layout_marginBottom="4dp"
+            />
+
+        <TextView
+            android:id="@+id/check_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="5"
+            android:layout_marginEnd="8dp"
+            android:text="CD[CON] = 1d20 + FAM" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

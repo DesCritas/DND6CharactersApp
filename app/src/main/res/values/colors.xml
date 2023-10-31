@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="material600red">#0040e2</color>
+    <color name="material600purple">#00b1e2</color>
+    <color name="material600blue">#7D30AC</color>
+    <color name="material600green">#F6B40C</color>
+    <color name="material600yellow">#b1e200</color>
+    <color name="material600orange">#11BD04</color>
+</resources>
