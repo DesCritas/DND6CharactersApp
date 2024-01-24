@@ -91,4 +91,13 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="password">password input</string>
+    <string name="email">email input</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="check_password">Check password</string>
+    <string name="home_text">Welcome!</string>
+    <string name="password_error_same">Passwords should be the same</string>
+    <string name="password_error">Passwords is incorrect</string>
+    <string name="login_error">Email is incorrect</string>
 </resources>

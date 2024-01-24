@@ -1,4 +1,4 @@
-package com.descritas.dnd6charactersapp.activity
+package com.descritas.dnd6charactersapp.core
 
 import android.os.Bundle
 import android.view.LayoutInflater

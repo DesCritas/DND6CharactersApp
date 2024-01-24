@@ -8,4 +8,6 @@
     <color name="material600green">#F6B40C</color>
     <color name="material600yellow">#b1e200</color>
     <color name="material600orange">#11BD04</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
 </resources>

@@ -16,7 +16,7 @@
         android:theme="@style/Theme.DND6CharactersApp"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".core.ui.MainActivity"
             android:exported="true">
             <nav-graph android:value="@navigation/nav_new" />
             <intent-filter>

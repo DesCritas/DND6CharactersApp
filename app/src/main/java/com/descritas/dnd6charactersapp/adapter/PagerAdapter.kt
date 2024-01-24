@@ -3,12 +3,12 @@ package com.descritas.dnd6charactersapp.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.descritas.dnd6charactersapp.activity.CharacterPortraitFragment
-import com.descritas.dnd6charactersapp.activity.EquipmentAndNotesFragment
-import com.descritas.dnd6charactersapp.activity.MainActionsFragment
-import com.descritas.dnd6charactersapp.activity.MainInfoFragment
-import com.descritas.dnd6charactersapp.activity.FeaturesListFragment
-import com.descritas.dnd6charactersapp.activity.SpecialActionsFragment
+import com.descritas.dnd6charactersapp.core.CharacterPortraitFragment
+import com.descritas.dnd6charactersapp.core.EquipmentAndNotesFragment
+import com.descritas.dnd6charactersapp.core.MainActionsFragment
+import com.descritas.dnd6charactersapp.core.MainInfoFragment
+import com.descritas.dnd6charactersapp.core.FeaturesListFragment
+import com.descritas.dnd6charactersapp.core.SpecialActionsFragment
 
 
 class PagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {

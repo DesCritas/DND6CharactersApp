@@ -1,4 +1,4 @@
-package com.descritas.dnd6charactersapp.activity
+package com.descritas.dnd6charactersapp.core
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.descritas.dnd6charactersapp.adapter.ActionListAdapter
-import com.descritas.dnd6charactersapp.adapter.ParamsListAdapter
 import com.descritas.dnd6charactersapp.databinding.FragmentMainActionsBinding
 import com.descritas.dnd6charactersapp.dto.ActionCard
-import com.descritas.dnd6charactersapp.dto.ParameterCard
 
 
 class MainActionsFragment : Fragment() {
