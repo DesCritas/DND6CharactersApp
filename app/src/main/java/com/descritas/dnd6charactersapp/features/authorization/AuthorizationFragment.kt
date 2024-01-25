@@ -1,25 +1,64 @@
 package com.descritas.dnd6charactersapp.features.authorization
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.descritas.dnd6charactersapp.R
+import com.descritas.dnd6charactersapp.core.ui.BaseFragment
+import com.descritas.dnd6charactersapp.data.AuthResult
+import com.descritas.dnd6charactersapp.databinding.FragmentAuthorizationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
-class AuthorizationFragment : Fragment() {
+@AndroidEntryPoint
+class AuthorizationFragment : BaseFragment<FragmentAuthorizationBinding>() {
+    override val bindingInflater: (LayoutInflater, ViewGroup?) -> FragmentAuthorizationBinding =
+        { inflater, container ->
+            FragmentAuthorizationBinding.inflate(inflater, container, false)
+        }
 
+    private val viewModel: AuthorizationViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val inputList = listOf(
+            binding.authMail,
+            binding.authPassword
+        )
+
+        viewModel.authState.observe(viewLifecycleOwner) {
+            when (it) {
+                AuthResult.Loading -> binding.progressBar.visibility = View.VISIBLE
+                is AuthResult.Error -> {
+                    binding.progressBar.visibility = View.GONE
+                    Toast.makeText(requireContext(), it.e.message.toString(), Toast.LENGTH_LONG)
+                        .show()
+                }
+
+                is AuthResult.Success -> {
+                    findNavController().navigate(R.id.action_authorizationFragment_to_homeFragment)
+                }
+            }
+        }
+
+        binding.signIn.setOnClickListener {
+            val allValidation = inputList.map { it.isValid() }
+
+            if (allValidation.all { it }) {
+                viewModel.sendCredentials(
+                    email = binding.authMail.text(),
+                    password = binding.authPassword.text()
+                )
+            }
+        }
+        binding.navigateToSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_authorizationFragment_to_registrationFragment)
+        }
+
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_authorization, container, false)
-    }
-
 }

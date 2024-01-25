@@ -5,6 +5,7 @@ import com.descritas.dnd6charactersapp.domain.User
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
+import java.lang.Exception
 
 class AuthRepositoryImpl @Inject constructor(private val auth: FirebaseAuth) : AuthRepository {
 
